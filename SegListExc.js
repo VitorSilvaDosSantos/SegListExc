@@ -1,6 +1,6 @@
-const express = require('express')
-const app = express()
-const port = 3000
+   const express = require('express')
+  const app = express()
+ const port = 3000
 
 // Middleware -> intermediario
 app.use(express.json())
@@ -14,10 +14,10 @@ app.get('/Hello', (req, res) => {
 
 //BODY
 app.post('/Exc01', (req, res) =>{
-    const quantidadeMinima = req.body.qtdMinima
-    const quantidadeMaxima = req.body.qtdMaxima
+         const quantidadeMinima = req.body.qtdMinima
+      const quantidadeMaxima = req.body.qtdMaxima
 
-    const estoqueMedia = (quantidadeMinima + quantidadeMaxima) / 2
+     const estoqueMedia = (quantidadeMinima + quantidadeMaxima) / 2
     
     res.send(Estoque média: ${estoqueMedia})
     
@@ -29,7 +29,7 @@ app.post('/Exc01', (req, res) =>{
 
 // BODY
 app.post('/Exc02', (req, res) =>{
-    const remuneracaoFixo = req.body.salFixo;
+       const remuneracaoFixo = req.body.salFixo;
     const remurecaoFinal = (remurecaoFixo / 100 * 30) + remurecaoFixo;
     
     if (remurecaoFixo > 1000) {
@@ -47,9 +47,9 @@ app.post('/Exc02', (req, res) =>{
 
 // BODY
 app.post('/Exc03', (req, res) =>{
-    const nome = req.body.nome
-    const remurecaoFixo = req.body.remurecaoFixo
-    const totalVendasMes = req.body.tVendasMes
+           const nome = req.body.nome
+        const remurecaoFixo = req.body.remurecaoFixo
+      const totalVendasMes = req.body.tVendasMes
     const percentualTotalVendas = req.body.pTVendas
 
     const remurecaoTotal = (totalVendasMes / 100 * percentualTotalVendas) + remurecaoFixo
@@ -65,9 +65,9 @@ app.post('/Exc03', (req, res) =>{
 // BODY
 
 app.post('/exc4', (req, res) =>{
-    const nome = req.body.nome
-    const distaciaPercorrida = req.body.dPercorrida
-    const tempoGasto = req.body.tempo
+          const nome = req.body.nome
+       const distaciaPercorrida = req.body.dPercorrida
+     const tempoGasto = req.body.tempo
 
     const velocidadeMedia = distaciaPercorrida / tempoPercorrido
     console.log(velocidadeMedia)
