@@ -5,11 +5,9 @@ const port = 3000
 // Middleware -> intermediario
 app.use(express.json())
 
-app.get('/hello', (req, res) => {
+app.get('/Hello', (req, res) => {
     res.send("Hello")
 })
-
-// Logica entrando com os exercicios
 
 // 1. Faça uma api para calcular o estoque médio de uma peça, sendo que ESTOQUE MÉDIO = (QUANTIDADE 
 //MÍNIMA + QUANTIDADE MÁXIMA) /2.
